@@ -38,7 +38,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:id="@+id/package_select"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/system_activity_header_text" />
+                android:backgroundTint="?android:attr/textColorPrimary" />
 
             <TextView
                 android:id="@+id/meta_creator"
@@ -49,10 +49,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
                 android:textSize="16sp"
                 android:visibility="gone"
-                android:textColor="@color/system_activity_header_text" />
+                android:textColor="?android:attr/textColorPrimary" />
         </LinearLayout>
 
-        <ListView
+        <android.support.v7.widget.RecyclerView
             android:id="@+id/package_images"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -60,7 +60,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
             android:padding="@dimen/activity_horizontal_margin"
             android:divider="@null"
             android:dividerHeight="0dip"
-            android:clipToPadding="false" />
+            android:clipToPadding="false"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 
